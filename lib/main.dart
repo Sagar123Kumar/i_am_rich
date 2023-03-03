@@ -1,19 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:for_github/views/home_page.dart';
 
-//The main function is the starting point for all our flutter apps.
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "I Am Rich",
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: MyHomePage(),
     );
   }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "I Am Rich",
+          ),
+        ),
+        backgroundColor: Colors.blueGrey[800],
+      ),
+      body: Image.asset('assets/images/pre.jpg'),
+    );
+  }`
 }
