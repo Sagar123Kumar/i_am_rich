@@ -19,7 +19,9 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blueGrey[900],
       ),
       body: Center(
-        child: Text('hello'),
+        child: Image(
+          image: AssetImage('assets/images/for.jpg'),
+        ),
       ),
     );
   }
